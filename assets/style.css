@@ -1,0 +1,755 @@
+body {
+  overflow: scroll;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.centered {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.duck1 {
+  background: url("https://e7.pngegg.com/pngimages/644/738/png-clipart-yellow-duck-toy-plastic-duck-animals-ducks-thumbnail.png") no-repeat;
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  -webkit-animation: swim1 4s infinite;
+          animation: swim1 4s infinite;
+}
+
+@-webkit-keyframes swim1 {
+  0% {
+    top: 10px;
+    left: 20px;
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+  }
+  50% {
+    top: 10px;
+    left: 300px;
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+  }
+  50.1% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  99.9% {
+    top: 10px;
+    left: 20px;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  100% {
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+  }
+}
+
+@keyframes swim1 {
+  0% {
+    top: 10px;
+    left: 20px;
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+  }
+  50% {
+    top: 10px;
+    left: 300px;
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+  }
+  50.1% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  99.9% {
+    top: 10px;
+    left: 20px;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  100% {
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+  }
+}
+
+.duck2 {
+  background: url("https://e7.pngegg.com/pngimages/644/738/png-clipart-yellow-duck-toy-plastic-duck-animals-ducks-thumbnail.png") no-repeat;
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  -webkit-animation: swim2 4s infinite;
+          animation: swim2 4s infinite;
+}
+
+@-webkit-keyframes swim2 {
+  0% {
+    -webkit-transform: scaleX(-1) translateX(-20px);
+            transform: scaleX(-1) translateX(-20px);
+  }
+  50% {
+    -webkit-transform: scaleX(-1) translateX(-290px);
+            transform: scaleX(-1) translateX(-290px);
+  }
+  50.1% {
+    -webkit-transform: scaleX(1) translateX(290px);
+            transform: scaleX(1) translateX(290px);
+  }
+  100% {
+    -webkit-transform: scaleX(1) translateX(20px);
+            transform: scaleX(1) translateX(20px);
+  }
+}
+
+@keyframes swim2 {
+  0% {
+    -webkit-transform: scaleX(-1) translateX(-20px);
+            transform: scaleX(-1) translateX(-20px);
+  }
+  50% {
+    -webkit-transform: scaleX(-1) translateX(-290px);
+            transform: scaleX(-1) translateX(-290px);
+  }
+  50.1% {
+    -webkit-transform: scaleX(1) translateX(290px);
+            transform: scaleX(1) translateX(290px);
+  }
+  100% {
+    -webkit-transform: scaleX(1) translateX(20px);
+            transform: scaleX(1) translateX(20px);
+  }
+}
+
+.animation_3:hover .flipbox_container {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.animation_3 {
+  width: 300px;
+  height: 300px;
+  border: 1 solid dark black;
+  background-color: green;
+  -webkit-perspective: 999px;
+          perspective: 999px;
+}
+
+.animation_3 .flipbox_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.animation_3 .flipbox_container .flipbox_front,
+.animation_3 .flipbox_container .flipbox_back {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.animation_3 .flipbox_container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.animation_3 .flipbox_container .flipbox_front {
+  /* Style the front side (fallback if image is missing) */
+  background-color: #bbb;
+  color: black;
+}
+
+.animation_3 .flipbox_container .flipbox_back {
+  /* Style the back side */
+  background-color: dodgerblue;
+  color: white;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.animation_4 {
+  width: 300px;
+  height: 300px;
+  border: 1 solid dark black;
+  background-color: green;
+  -webkit-perspective: 999px;
+          perspective: 999px;
+}
+
+.animation_4 .flipbox_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: flip 5s infinite;
+          animation: flip 5s infinite;
+}
+
+@-webkit-keyframes flip {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+
+@keyframes flip {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+
+.animation_4 .flipbox_container .flipbox_front,
+.animation_4 .flipbox_container .flipbox_back {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.animation_4 .flipbox_container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.animation_4 .flipbox_container .flipbox_front {
+  /* Style the front side (fallback if image is missing) */
+  background-color: #bbb;
+  color: black;
+}
+
+.animation_4 .flipbox_container .flipbox_back {
+  /* Style the back side */
+  background-color: dodgerblue;
+  color: white;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.animation_5 {
+  width: 300px;
+  height: 300px;
+  border: 1 solid dark black;
+  background-color: green;
+  -webkit-perspective: 2200px;
+          perspective: 2200px;
+}
+
+.animation_5 .flipbox_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: flip 5s infinite;
+          animation: flip 5s infinite;
+}
+
+@keyframes flip {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+
+.animation_5 .flipbox_container .flipbox_front,
+.animation_5 .flipbox_container .flipbox_back {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-box-shadow: 0px 1px 12px 1px black;
+          box-shadow: 0px 1px 12px 1px black;
+}
+
+.animation_5 .flipbox_container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.animation_5 .flipbox_container .flipbox_front {
+  /* Style the front side (fallback if image is missing) */
+  background-color: #bbb;
+  color: black;
+}
+
+.animation_5 .flipbox_container .flipbox_back {
+  /* Style the back side */
+  background-color: dodgerblue;
+  color: #691717;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.animation_5 .flipbox_container .card_frame {
+  position: absolute;
+  background-color: #bbb;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+
+.animation_5 .flipbox_container .right {
+  height: 90%;
+  width: 10px;
+  top: 0px;
+  left: -5px;
+}
+
+.animation_5 .flipbox_container .left {
+  height: 90%;
+  width: 10px;
+  top: 0px;
+  right: -4px;
+}
+
+.animation_5 .flipbox_container .top {
+  -webkit-transform: rotatex(90deg);
+          transform: rotatex(90deg);
+  height: 10px;
+  width: 100%;
+  top: -5px;
+}
+
+.animation_5 .flipbox_container .bottom {
+  -webkit-transform: rotatex(90deg);
+          transform: rotatex(90deg);
+  height: 10px;
+  width: 100%;
+  bottom: 26px;
+}
+
+.flipcard_container {
+  width: 40%;
+  height: 0;
+  padding-bottom: 45%;
+  border: 1 solid dark rgba(0, 0, 0, 0.76);
+  background-color: green;
+  -webkit-perspective: 1900px;
+          perspective: 1900px;
+}
+
+.flipcard_container .animation_container {
+  position: relative;
+  width: 99%;
+  padding-bottom: 99%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: flip6 5s infinite;
+          animation: flip6 5s infinite;
+  border: 3px solid white;
+  /*.card_back {
+			transform: rotateY(-180deg);
+		}*/
+}
+
+@-webkit-keyframes flip6 {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes flip6 {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+.flipcard_container .animation_container img {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.flipcard_container .animation_container .card_front {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-box-shadow: 0px 1px 12px 1px black;
+          box-shadow: 0px 1px 12px 1px black;
+  z-index: 2;
+}
+
+.flipcard_container .animation_container .card_back {
+  width: 100%;
+}
+
+.flipcard_container .animation_container img {
+  border: 10 solid black;
+}
+
+.flipcard_container .animation_container .frame_top {
+  width: 100%;
+  height: 10px;
+  background-color: black;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  top: -5px;
+}
+
+.flipcard_container .animation_container .frame_top {
+  width: 100%;
+  height: 10px;
+  background-color: black;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  bottom: -5px;
+}
+
+.flipcard_container .animation_container .frame_left {
+  width: 10px;
+  height: 100%;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+  background-color: black;
+  left: -5px;
+}
+
+.flipcard_container .animation_container .frame_right {
+  width: 10px;
+  height: 100%;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+  background-color: black;
+  right: -5px;
+}
+
+.checkerboard {
+  width: 90%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[9];
+      grid-template-columns: repeat(9, 1fr);
+}
+
+.checkerboard .flipcard_container:nth-child(even) .animation_container {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+}
+
+.checkerboard .flipcard_container {
+  width: 95%;
+  height: 0;
+  padding-bottom: 95%;
+  margin-bottom: 5%;
+  border: 1 solid dark rgba(0, 0, 0, 0.76);
+  background-color: #729db1;
+  -webkit-perspective: 1900px;
+          perspective: 1900px;
+}
+
+.checkerboard .flipcard_container .animation_container {
+  position: relative;
+  width: 99%;
+  padding-bottom: 99%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: flip6 16s infinite;
+          animation: flip6 16s infinite;
+  border: 3px solid white;
+  /*.card_back {
+                transform: rotateY(-180deg);
+            }*/
+}
+
+@keyframes flip6 {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  25% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  50% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+.checkerboard .flipcard_container .animation_container img {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.checkerboard .flipcard_container .animation_container .card_front {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-box-shadow: 0px 1px 12px 1px black;
+          box-shadow: 0px 1px 12px 1px black;
+  z-index: 2;
+}
+
+.checkerboard .flipcard_container .animation_container .card_back {
+  width: 100%;
+}
+
+.checkerboard .flipcard_container .animation_container img {
+  border: 10 solid black;
+}
+
+.checkerboard .flipcard_container .animation_container .frame_top {
+  width: 100%;
+  height: 10px;
+  background-color: black;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  top: -5px;
+}
+
+.checkerboard .flipcard_container .animation_container .frame_top {
+  width: 100%;
+  height: 10px;
+  background-color: black;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  bottom: -5px;
+}
+
+.checkerboard .flipcard_container .animation_container .frame_left {
+  width: 10px;
+  height: 100%;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+  background-color: black;
+  left: -5px;
+}
+
+.checkerboard .flipcard_container .animation_container .frame_right {
+  width: 10px;
+  height: 100%;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+  background-color: black;
+  right: -5px;
+}
+
+.checkerboard8 {
+  width: 90%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[11];
+      grid-template-columns: repeat(11, 1fr);
+}
+
+.checkerboard8 .flipcard_container:nth-child(even) .animation_container {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+}
+
+.checkerboard8 .flipcard_container {
+  width: 95%;
+  height: 0;
+  padding-bottom: 95%;
+  margin-bottom: 5%;
+  border: 1 solid dark rgba(0, 0, 0, 0.76);
+  background-color: #729db1;
+  -webkit-perspective: 1900px;
+          perspective: 1900px;
+}
+
+.checkerboard8 .flipcard_container .animation_container {
+  position: relative;
+  width: 99%;
+  padding-bottom: 99%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: flip6 16s infinite;
+          animation: flip6 16s infinite;
+  border: 3px solid white;
+  /*.card_back {
+                transform: rotateY(-180deg);
+            }*/
+}
+
+@keyframes flip6 {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  25% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  50% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+.checkerboard8 .flipcard_container .animation_container img {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.checkerboard8 .flipcard_container .animation_container .card_front {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-box-shadow: 0px 1px 12px 1px white;
+          box-shadow: 0px 1px 12px 1px white;
+  z-index: 2;
+}
+
+.checkerboard8 .flipcard_container .animation_container .card_back {
+  width: 100%;
+}
+
+.checkerboard8 .flipcard_container .animation_container img {
+  border: 10 solid white;
+}
+
+.checkerboard8 .flipcard_container .animation_container .frame_top {
+  width: 100%;
+  height: 10px;
+  background-color: white;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  top: -5px;
+}
+
+.checkerboard8 .flipcard_container .animation_container .frame_top {
+  width: 100%;
+  height: 10px;
+  background-color: white;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  bottom: -5px;
+}
+
+.checkerboard8 .flipcard_container .animation_container .frame_left {
+  width: 10px;
+  height: 100%;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+  background-color: white;
+  left: -5px;
+}
+
+.checkerboard8 .flipcard_container .animation_container .frame_right {
+  width: 10px;
+  height: 100%;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+  background-color: white;
+  right: -5px;
+}
+/*# sourceMappingURL=style.css.map */

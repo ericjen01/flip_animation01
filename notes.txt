@@ -1,0 +1,24 @@
+
+---------------------------- Issue, Solution & Tips : -----------------------------------------------------------------------------------
+
+-CSS ANIMATION ROTATE AND TRANSLATE DOESN'T WORK TOGETHER
+        10% {
+            transform: scaleX(-1);
+            transform: translateX(250px);
+            }
+    The correct way to apply multiple transforms is to simply place them all in 
+    one transform property, with each transform separated by a space:
+        10% {
+		    transform: scaleX(-1) translateX(250px);
+            }
+
+- HOW TO SCALE A DIV'S HEIGHT PROPORTIONAL TO ITS WIDTH?
+    Do it with the help of padding on a parent item, because relative padding 
+    (even height-wise) is based on the width of the parent element
+
+    width: 25px;     =>     width: 25%;
+    height: 25px;           height: 0;
+                            padding-bottom: 25% (or desired proportion)
+    
+    We can probably use the same technique for abosoluote positioning:
+        left: 30px  =>      margin-left: 10%;

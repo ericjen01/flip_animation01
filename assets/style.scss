@@ -1,0 +1,580 @@
+body {
+	overflow: scroll;
+}
+
+.block {
+	display: block;
+}
+.flex {
+	display: flex;
+}
+.centered {
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+.relative {
+	position: relative;
+}
+.absolute {
+	position: absolute;
+}
+
+//------------------------------ANIMATION 1-----------------------------//
+.duck1 {
+	background: url("https://e7.pngegg.com/pngimages/644/738/png-clipart-yellow-duck-toy-plastic-duck-animals-ducks-thumbnail.png")
+		no-repeat;
+	background-size: contain;
+	width: 200px;
+	height: 200px;
+	position: relative; // set relative so the image can move for duck1
+	animation: swim1 4s infinite;
+}
+
+@keyframes swim1 {
+	0% {
+		top: 10px;
+		left: 20px;
+		transform: scaleX(-1);
+	}
+
+	50% {
+		top: 10px;
+		left: 300px;
+		transform: scaleX(-1);
+	}
+	50.1% {
+		transform: scaleX(1);
+	}
+
+	99.9% {
+		top: 10px;
+		left: 20px;
+		transform: scaleX(1);
+	}
+
+	100% {
+		transform: scaleX(-1);
+	}
+}
+
+//------------------------------ANIMATION 2-----------------------------//
+.duck2 {
+	background: url("https://e7.pngegg.com/pngimages/644/738/png-clipart-yellow-duck-toy-plastic-duck-animals-ducks-thumbnail.png")
+		no-repeat;
+	background-size: contain;
+	width: 200px;
+	height: 200px;
+	position: relative; // set relative so the image can move for duck1
+	animation: swim2 4s infinite;
+}
+
+@keyframes swim2 {
+	0% {
+		transform: scaleX(-1) translateX(-20px);
+	}
+	50% {
+		transform: scaleX(-1) translateX(-290px);
+	}
+	50.1% {
+		transform: scaleX(1) translateX(290px);
+	}
+	100% {
+		transform: scaleX(1) translateX(20px);
+	}
+}
+
+//------------------------------ANIMATION 3-----------------------------//
+.animation_3:hover .flipbox_container {
+	//horizontal flip when hover animation_3
+	transform: rotateY(180deg);
+}
+
+.animation_3 {
+	//--main container for flipbox_container. width & height can be set to user's liking
+	width: 300px;
+	height: 300px;
+	border: 1 solid dark black;
+	background-color: green;
+	perspective: 999px; //remove this line if 3d effect is not wanted
+
+	.flipbox_container {
+		position: relative; //set to relative for flipbox_front flipbox_back contents
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		transition: transform 1s;
+		transform-style: preserve-3d; //children of the element should be positioned in the 3D-space.
+
+		.flipbox_front,
+		.flipbox_back {
+			// Absolute-position the front and back side
+			position: absolute;
+			width: 100%;
+			height: 90%;
+			backface-visibility: hidden;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+
+		.flipbox_front {
+			/* Style the front side (fallback if image is missing) */
+			background-color: #bbb;
+			color: black;
+		}
+
+		.flipbox_back {
+			/* Style the back side */
+			background-color: dodgerblue;
+			color: white;
+			transform: rotateY(180deg);
+		}
+	}
+}
+
+//------------------------------ANIMATION 4-----------------------------//
+.animation_4 {
+	//--main container for flipbox_container. width & height can be set to user's liking
+	width: 300px;
+	height: 300px;
+	border: 1 solid dark black;
+	background-color: green;
+	perspective: 999px; //remove this line if 3d effect is not wanted
+
+	.flipbox_container {
+		//will flip with the animation
+		position: relative; //set to relative for flipbox_front flipbox_back contents
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		transform-style: preserve-3d; //children of the element should be positioned in the 3D-space.
+		animation: flip 5s infinite;
+
+		@keyframes flip {
+			0% {
+				transform: rotateY(0deg);
+			}
+			50% {
+				transform: rotateY(180deg);
+			}
+			100% {
+				transform: rotateY(0deg);
+			}
+		}
+
+		.flipbox_front,
+		.flipbox_back {
+			// Absolute-position the front and back side
+			position: absolute;
+			width: 100%;
+			height: 90%;
+			backface-visibility: hidden;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+
+		.flipbox_front {
+			/* Style the front side (fallback if image is missing) */
+			background-color: #bbb;
+			color: black;
+		}
+
+		.flipbox_back {
+			/* Style the back side */
+			background-color: dodgerblue;
+			color: white;
+			transform: rotateY(180deg);
+		}
+	}
+}
+
+//------------------------------ANIMATION 5-----------------------------//
+.animation_5 {
+	//--main container for flipbox_container. width & height can be set to user's liking
+	width: 300px;
+	height: 300px;
+	border: 1 solid dark black;
+	background-color: green;
+	perspective: 2200px; //remove this line if 3d effect is not wanted
+	// overflow: hidden; //can be used to hide perspective edges
+
+	.flipbox_container {
+		//will flip with the animation
+		position: relative; //set to relative for flipbox_front flipbox_back contents
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		transform-style: preserve-3d; //children of the element should be positioned in the 3D-space.
+		animation: flip 5s infinite;
+
+		@keyframes flip {
+			0% {
+				transform: rotateY(0deg);
+			}
+			50% {
+				transform: rotateY(180deg);
+			}
+			100% {
+				transform: rotateY(0deg);
+			}
+		}
+
+		.flipbox_front,
+		.flipbox_back {
+			// Absolute-position the front and back side
+			position: absolute;
+			width: 100%;
+			height: 90%;
+			backface-visibility: hidden;
+			box-shadow: 0px 1px 12px 1px black;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+
+		.flipbox_front {
+			/* Style the front side (fallback if image is missing) */
+			background-color: #bbb;
+			color: black;
+		}
+
+		.flipbox_back {
+			/* Style the back side */
+			background-color: dodgerblue;
+			color: rgb(105, 23, 23);
+			transform: rotateY(-180deg);
+		}
+
+		.card_frame {
+			position: absolute;
+			background-color: #bbb;
+			transform: rotateY(90deg);
+		}
+		.right {
+			height: 90%;
+			width: 10px;
+			top: 0px;
+			left: -5px;
+		}
+		.left {
+			height: 90%;
+			width: 10px;
+			top: 0px;
+			right: -4px;
+		}
+		.top {
+			transform: rotatex(90deg);
+			height: 10px;
+			width: 100%;
+			top: -5px;
+		}
+		.bottom {
+			transform: rotatex(90deg);
+			height: 10px;
+			width: 100%;
+			bottom: 26px;
+		}
+	}
+}
+
+//------------------------------ANIMATION 6-----------------------------//
+.flipcard_container {
+	//--main container for flipbox_container. width & height can be set to user's liking
+	width: 40%;
+	height: 0; // keep the width and "height" proportional by using padding
+	padding-bottom: 45%;
+	border: 1 solid dark rgba(0, 0, 0, 0.76);
+	background-color: green;
+	perspective: 1900px; //remove this line if 3d effect is not wanted
+	// overflow: hidden; //can be used to hide perspective edges
+
+	.animation_container {
+		//will flip with the animation
+		position: relative; //set to relative for flipbox_front flipbox_back contents
+		width: 99%;
+		padding-bottom: 99%; //**** important parameter- will affect the card frames below
+		transform-style: preserve-3d; //children of the element should be positioned in the 3D-space.
+		animation: flip6 5s infinite;
+		border: 3px solid white;
+
+		@keyframes flip6 {
+			0% {
+				transform: rotateY(0deg);
+			}
+			50% {
+				transform: rotateY(180deg);
+			}
+			100% {
+				transform: rotateY(360deg);
+			}
+		}
+		img {
+			width: 100%; //set width to fit the animation container
+			height: fit-content; //restric height
+			object-fit: cover;
+			aspect-ratio: 1;
+		}
+		.card_front
+		/*, .card_back*/ {
+			//comment out ".card_back" so no need to enable ".card_back rotateY(-180deg)" below
+			width: 100%; //set width to fit the animation container
+			height: fit-content; //restric height
+			backface-visibility: hidden;
+			box-shadow: 0px 1px 12px 1px black;
+			z-index: 2;
+		}
+
+		/*.card_back {
+			transform: rotateY(-180deg);
+		}*/
+		.card_back {
+			width: 100%;
+		}
+		img {
+			border: 10 solid black;
+		}
+
+		.frame_top {
+			width: 100%;
+			height: 10px;
+			background-color: black;
+			transform: rotateX(90deg);
+			top: -5px;
+		}
+		.frame_top {
+			width: 100%;
+			height: 10px;
+			background-color: black;
+			transform: rotateX(90deg);
+			bottom: -5px;
+		}
+		.frame_left {
+			width: 10px;
+			height: 100%;
+			transform: rotateY(90deg);
+			background-color: black;
+			left: -5px;
+		}
+		.frame_right {
+			width: 10px;
+			height: 100%;
+			transform: rotateY(90deg);
+			background-color: black;
+			right: -5px;
+		}
+	}
+}
+
+//------------------------------ANIMATION 7-----------------------------//
+.checkerboard {
+	width: 90%;
+	display: grid;
+	grid-template-columns: repeat(9, 1fr);
+
+	.flipcard_container:nth-child(even) {
+		.animation_container {
+			animation-delay: 8s;
+		}
+	}
+	.flipcard_container {
+		//--main container for flipbox_container. width & height can be set to user's liking
+		width: 95%;
+		height: 0; // keep the width and "height" proportional by using padding
+		padding-bottom: 95%;
+		margin-bottom: 5%;
+		border: 1 solid dark rgba(0, 0, 0, 0.76);
+		background-color: rgb(114, 157, 177);
+		perspective: 1900px; //remove this line if 3d effect is not wanted
+		// overflow: hidden; //can be used to hide perspective edges
+
+		.animation_container {
+			//will flip with the animation
+			position: relative; //set to relative for flipbox_front flipbox_back contents
+			width: 99%;
+			padding-bottom: 99%; //**** important parameter- will affect the card frames below
+			transform-style: preserve-3d; //children of the element should be positioned in the 3D-space.
+			animation: flip6 16s infinite;
+			border: 3px solid white;
+
+			@keyframes flip6 {
+				0% {
+					transform: rotateY(0deg);
+				}
+				25% {
+					transform: rotateY(180deg);
+				}
+				50% {
+					transform: rotateY(360deg);
+				}
+				100% {
+					transform: rotateY(360deg);
+				}
+			}
+			img {
+				width: 100%; //set width to fit the animation container
+				height: fit-content; //restric height
+				object-fit: cover;
+				aspect-ratio: 1;
+			}
+			.card_front
+            /*, .card_back*/ {
+				//comment out ".card_back" so no need to enable ".card_back rotateY(-180deg)" below
+				width: 100%; //set width to fit the animation container
+				height: fit-content; //restric height
+				backface-visibility: hidden;
+				box-shadow: 0px 1px 12px 1px black;
+				z-index: 2;
+			}
+
+			/*.card_back {
+                transform: rotateY(-180deg);
+            }*/
+			.card_back {
+				width: 100%;
+			}
+			img {
+				border: 10 solid black;
+			}
+
+			.frame_top {
+				width: 100%;
+				height: 10px;
+				background-color: black;
+				transform: rotateX(90deg);
+				top: -5px;
+			}
+			.frame_top {
+				width: 100%;
+				height: 10px;
+				background-color: black;
+				transform: rotateX(90deg);
+				bottom: -5px;
+			}
+			.frame_left {
+				width: 10px;
+				height: 100%;
+				transform: rotateY(90deg);
+				background-color: black;
+				left: -5px;
+			}
+			.frame_right {
+				width: 10px;
+				height: 100%;
+				transform: rotateY(90deg);
+				background-color: black;
+				right: -5px;
+			}
+		} //.animation_container
+	} //.flipcard_container
+} //.checkerboard
+
+//------------------------------ANIMATION 7-----------------------------//
+.checkerboard8 {
+	width: 90%;
+	display: grid;
+	grid-template-columns: repeat(11, 1fr);
+
+	.flipcard_container:nth-child(even) {
+		.animation_container {
+			animation-delay: 8s;
+		}
+	}
+	.flipcard_container {
+		//--main container for flipbox_container. width & height can be set to user's liking
+		width: 95%;
+		height: 0; // keep the width and "height" proportional by using padding
+		padding-bottom: 95%;
+		margin-bottom: 5%;
+		border: 1 solid dark rgba(0, 0, 0, 0.76);
+		background-color: rgb(114, 157, 177);
+		perspective: 1900px; //remove this line if 3d effect is not wanted
+		// overflow: hidden; //can be used to hide perspective edges
+
+		.animation_container {
+			//will flip with the animation
+			position: relative; //set to relative for flipbox_front flipbox_back contents
+			width: 99%;
+			padding-bottom: 99%; //**** important parameter- will affect the card frames below
+			transform-style: preserve-3d; //children of the element should be positioned in the 3D-space.
+			animation: flip6 16s infinite;
+			border: 3px solid white;
+
+			@keyframes flip6 {
+				0% {
+					transform: rotateY(0deg);
+				}
+				25% {
+					transform: rotateY(180deg);
+				}
+				50% {
+					transform: rotateY(360deg);
+				}
+				100% {
+					transform: rotateY(360deg);
+				}
+			}
+			img {
+				width: 100%; //set width to fit the animation container
+				height: fit-content; //restric height
+				object-fit: cover;
+				aspect-ratio: 1;
+			}
+			.card_front
+            /*, .card_back*/ {
+				//comment out ".card_back" so no need to enable ".card_back rotateY(-180deg)" below
+				width: 100%; //set width to fit the animation container
+				height: fit-content; //restric height
+				backface-visibility: hidden;
+				box-shadow: 0px 1px 12px 1px rgb(255, 255, 255);
+				z-index: 2;
+			}
+
+			/*.card_back {
+                transform: rotateY(-180deg);
+            }*/
+			.card_back {
+				width: 100%;
+			}
+			img {
+				border: 10 solid rgb(255, 255, 255);
+			}
+
+			.frame_top {
+				width: 100%;
+				height: 10px;
+				background-color: rgb(255, 255, 255);
+				transform: rotateX(90deg);
+				top: -5px;
+			}
+			.frame_top {
+				width: 100%;
+				height: 10px;
+				background-color: rgb(255, 255, 255);
+				transform: rotateX(90deg);
+				bottom: -5px;
+			}
+			.frame_left {
+				width: 10px;
+				height: 100%;
+				transform: rotateY(90deg);
+				background-color: rgb(255, 255, 255);
+				left: -5px;
+			}
+			.frame_right {
+				width: 10px;
+				height: 100%;
+				transform: rotateY(90deg);
+				background-color: rgb(255, 255, 255);
+				right: -5px;
+			}
+		} //.animation_container
+	} //.flipcard_container
+} //.checkerboard

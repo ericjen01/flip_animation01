@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Flip_animation</title>
+		<link rel="stylesheet" href="assets/style.css" />
+	</head>
+	<body>
+		<!--------------- ANIMATION 1---------------------------------------------------------------->
+		<div class="animation_1">
+			<p>ANIMATION 1</p>
+			<div class="duck1"></div>
+		</div>
+
+		<!--------------- ANIMATION 2---------------------------------------------------------------->
+		<div class="animation_2">
+			<p>ANIMATION 2</p>
+			<div class="duck2"></div>
+		</div>
+
+		<!--------------- ANIMATION 3---------------------------------------------------------------->
+		<div class="animation_3">
+			<!-- animation_3 is the main container, width & height can be custom-->
+			<p>ANIMATION 3</p>
+			<div class="flipbox_container">
+				<!-- flipbox_container is for positioning the front and back side-->
+				<!-- and enables animation-->
+				<div class="flipbox_front">
+					<img
+						class="duck3"
+						src="https://e7.pngegg.com/pngimages/242/820/png-clipart-red-and-yellow-question-mark-illustration-question-mark-icon-question-mark-3d-computer-graphics-text.png"
+						alt=""
+					/>
+				</div>
+				<div class="flipbox_back">
+					<img
+						class="duck3"
+						src="https://e7.pngegg.com/pngimages/644/738/png-clipart-yellow-duck-toy-plastic-duck-animals-ducks-thumbnail.png"
+						alt=""
+					/>
+				</div>
+			</div>
+		</div>
+
+		<!--------------- ANIMATION 4---------------------------------------------------------------->
+		<div class="animation_4">
+			<p>ANIMATION 4</p>
+			<div class="flipbox_container">
+				<div class="flipbox_front">
+					<img
+						class="duck4"
+						src="https://e7.pngegg.com/pngimages/242/820/png-clipart-red-and-yellow-question-mark-illustration-question-mark-icon-question-mark-3d-computer-graphics-text.png"
+						alt=""
+					/>
+				</div>
+				<div class="flipbox_back">
+					<img
+						class="duck4"
+						src="https://e7.pngegg.com/pngimages/644/738/png-clipart-yellow-duck-toy-plastic-duck-animals-ducks-thumbnail.png"
+						alt=""
+					/>
+				</div>
+			</div>
+		</div>
+
+		<br />
+		<br />
+		<!--------------- ANIMATION 5---------------------------------------------------------------->
+
+		<!--Adding card frame using color stripes and shadowbox that 90deg from image and spins 180deg with image to give an thickness illusion-->
+		<!--See https://stackoverflow.com/questions/11644993/want-to-show-the-thickness-of-an-element-while-it-rotate-->
+		<!--See http://jsfiddle.net/joshnh/y7rQL/-->
+		<div class="animation_5">
+			<p>ANIMATION 5</p>
+			<div class="flipbox_container">
+				<div class="flipbox_front">
+					<img
+						class="duck5"
+						src="https://e7.pngegg.com/pngimages/242/820/png-clipart-red-and-yellow-question-mark-illustration-question-mark-icon-question-mark-3d-computer-graphics-text.png"
+						alt=""
+					/>
+				</div>
+				<div class="flipbox_back">
+					<img
+						class="duck5"
+						src="https://e7.pngegg.com/pngimages/644/738/png-clipart-yellow-duck-toy-plastic-duck-animals-ducks-thumbnail.png"
+						alt=""
+					/>
+				</div>
+				<div class="card_frame top"></div>
+				<div class="card_frame right"></div>
+				<div class="card_frame bottom"></div>
+				<div class="card_frame left"></div>
+			</div>
+		</div>
+
+		<br /><br />
+
+		<!--------------- ANIMATION 6---------------------------------------------------------------->
+		<!--Changed naming to simplify the code structure -->
+		<!--Discovered the use of padding and margin to make proportional dimensions-->
+
+		<div class="flipcard_container">
+			<p>ANIMATION 6- "flipcard_container"</p>
+			<div class="animation_container block centered">
+				<div class="card_front absolute">
+					<img
+						class="duck5"
+						src="https://e7.pngegg.com/pngimages/242/820/png-clipart-red-and-yellow-question-mark-illustration-question-mark-icon-question-mark-3d-computer-graphics-text.png"
+						alt=""
+					/>
+				</div>
+				<div class="card_back absolute">
+					<img
+						class="duck5"
+						src="https://e7.pngegg.com/pngimages/644/738/png-clipart-yellow-duck-toy-plastic-duck-animals-ducks-thumbnail.png"
+						alt=""
+					/>
+				</div>
+				<div class="frame_top absolute"></div>
+				<div class="frame_bottom absolute"></div>
+				<div class="frame_left absolute"></div>
+				<div class="frame_right absolute"></div>
+			</div>
+		</div>
+
+		<br /><br />
+
+		<!--------------- ANIMATION 7---------------------------------------------------------------->
+		<!--ADDED GRID DSPLAY TO MAKE A CHECKER BOARD-->
+		<!--ADD JSCRIPT FUNCTION createCards TO FILL THE GRID WITH CARDS-->
+		<p>ANIMATION 7</p>
+		<div class="checkerboard centered">
+			<!--<div class="flipcard_container">
+				<div class="animation_container block centered">
+					<div class="card_front absolute">
+						<img
+							class="duck5"
+							src="https://e7.pngegg.com/pngimages/242/820/png-clipart-red-and-yellow-question-mark-illustration-question-mark-icon-question-mark-3d-computer-graphics-text.png"
+							alt=""
+						/>
+					</div>
+					<div class="card_back absolute">
+						<img
+							class="duck5"
+							src="https://e7.pngegg.com/pngimages/644/738/png-clipart-yellow-duck-toy-plastic-duck-animals-ducks-thumbnail.png"
+							alt=""
+						/>
+					</div>
+					<div class="frame_top absolute"></div>
+					<div class="frame_bottom absolute"></div>
+					<div class="frame_left absolute"></div>
+					<div class="frame_right absolute"></div>
+				</div>
+			</div>
+			-->
+		</div>
+
+		<br />
+		<br />
+
+		<!--------------- ANIMATION 8---------------------------------------------------------------->
+		<!--ADDED GRID DSPLAY TO MAKE A CHECKER BOARD-->
+		<!--ADD JSCRIPT FUNCTION createCards TO FILL THE GRID WITH CARDS-->
+		<p>ANIMATION 8</p>
+		<div class="checkerboard8 centered">
+			<!--<div class="flipcard_container">
+				<div class="animation_container block centered">
+					<div class="card_front absolute">
+						<img
+							class="duck5"
+							src="https://e7.pngegg.com/pngimages/242/820/png-clipart-red-and-yellow-question-mark-illustration-question-mark-icon-question-mark-3d-computer-graphics-text.png"
+							alt=""
+						/>
+					</div>
+					<div class="card_back absolute">
+						<img
+							class="duck5"
+							src="https://e7.pngegg.com/pngimages/644/738/png-clipart-yellow-duck-toy-plastic-duck-animals-ducks-thumbnail.png"
+							alt=""
+						/>
+					</div>
+					<div class="frame_top absolute"></div>
+					<div class="frame_bottom absolute"></div>
+					<div class="frame_left absolute"></div>
+					<div class="frame_right absolute"></div>
+				</div>
+			</div>
+			-->
+		</div>
+
+		<!--------------- END OF THE BODY CONENT---------------------------------------------------------------->
+	</body>
+	<script src="assets/main.js"></script>
+</html>
